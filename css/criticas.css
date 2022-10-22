@@ -1,0 +1,163 @@
+.contenedor-criticas{
+  position: relative;
+  text-align: center;
+  margin-top: 3%;
+  color: white;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3%;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #E7DBC5;
+}
+
+.div-criticas{
+  position: relative;
+  display: flex;
+  left: 0;
+  margin-top: 0%;
+  width: 100%;
+  color: black;
+  text-align: center;
+
+}
+
+.critica{
+position: absolute;
+left: 0px;
+text-align: center;
+transition: opacity 0.5s;
+color:#E7DBC5;
+font-size: 130%;
+}
+
+
+.texto-critica{
+}
+
+.botones-criticas{
+  position: relative;
+  display: flex;
+  margin-top:30%;
+  cursor: pointer;
+}
+
+#boton-critica-siguiente{
+transform: rotateY(180deg);
+}
+
+.criticas-svg{
+margin: 8px;
+}
+
+#Group-4-Copy{
+  transition: fill 0.5s;
+}
+
+#Group-4-Copy:hover{
+  fill: #E64352;
+}
+
+.criticas-completas{
+
+  position: absolute;
+  margin-top: -30%;
+  background-color: white;
+  color:black;
+  width: 90%;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 10px 10px 0 0;
+  background: #E7DBC5;
+}
+
+.texto-critica-completa{
+  position: absolute;
+  left: 0;
+  background: #E7DBC5;
+  display: none;
+  text-align: left;
+  padding: 3%;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+.ver-texto-completo{
+  text-decoration: none;
+  color: #ADA0A6;
+  font-size: 110%;
+
+}
+
+.ver-texto-completo:hover{
+  text-decoration: underline;
+}
+
+.no-desplegada{
+  display: none;
+}
+
+
+/*AJUSTES POR TAMAÑO*/
+
+@media (max-width: 1000px){
+.botones-criticas{
+  margin-top: 40%;
+}
+
+}
+
+
+@media (max-width: 850px){
+
+.critica{
+  font-size: 100%;
+}
+
+}
+
+@media (max-width: 650px){
+
+  .botones-criticas{
+    margin-top: 90%;
+  }
+
+.criticas-completas{
+  margin-top: -120%;
+  width: 110%;
+}
+
+}
+
+@media (max-width: 450px)
+{
+
+.critica{
+  font-size: 80%;
+}
+
+  .botones-criticas{
+    margin-top: 150%;
+  }
+
+}
+
+@media (max-width: 350px){
+  .botones-criticas{
+    margin-top: 200%;
+  }
+
+.texto-critica-completa{
+  font-size: 90%;
+}
+
+}

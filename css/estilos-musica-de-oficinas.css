@@ -1,0 +1,193 @@
+*{
+  margin: 0 auto;
+}
+
+body{
+  text-align:center;
+  background: #000000;
+  color: white;
+}
+
+img{object-fit: cover;
+max-width: none;
+}
+
+#portada-organigrama{
+  width: 80%;
+  margin-top: 5%;
+
+}
+
+#celular{
+  display: none;
+}
+
+
+#portada-pantalla-celular{
+  margin: 0;
+}
+
+#galeria-principal-celular{
+  width: 90vw;
+}
+
+
+
+.vector{
+  stroke-width: 1px;
+  stroke: #f16c69;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  fill: transparent;
+  animation: dash 3s linear forwards;
+}
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+#musica-de-oficinas{
+  cursor: pointer;
+}
+
+#pregunta{
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+
+
+.link{
+  color:white;
+}
+
+.secciones-desplegadas{
+  display:none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.contenedor-historia{
+  margin-top: 2%;
+  display: flex;
+  width: 60%;
+}
+
+.textos-mdo{
+margin-top: 10%;
+text-align: left;
+}
+
+
+
+.contenedor-elenco{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#elenco-celular{
+  display: none;
+}
+
+.video-teatrailer{
+  margin-top: 5%;
+  text-align: center;
+  color:white;
+  font-size: 130%;
+
+}
+
+.seleccionada{
+  stroke-width: 3;
+  stroke: #C14953;
+
+}
+
+.etiqueta{
+  cursor: pointer;
+}
+
+.etiqueta:hover{
+  stroke: #C14953;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  fill: transparent;
+  animation: dash 7s linear forwards;
+}
+
+.foto-1{
+  margin-left: -15%;
+}
+
+
+
+#boton-cierra-foto{
+  padding-top: 6px;
+}
+
+
+@media only screen and (max-width:900px){
+  #elenco-general{
+    display: none;
+  }
+
+
+  #elenco-celular{
+    display: block;
+  }
+
+
+  .contenedor-elenco{
+  flex-direction: column;
+  }
+
+  .contenedor-historia{
+    flex-direction: column;
+  }
+
+  .galeria-pantalla-grande{
+    display:none;
+  }
+
+  #celular{
+    display: block;
+  }
+    #portada-pantalla-celular{
+
+      margin-top: 8%;
+
+  }
+
+
+  #imagen-historia{
+    margin-left:-40px;
+  }
+
+  .foto-1{
+    margin-left: 2%;
+  }
+
+.foto-nanu{
+  width: 100%;
+  height: 100%;
+}
+
+}
+
+@media only screen and (max-width:600px){
+
+iframe{
+  height: 300px;
+}
+
+
+
+
+
+}

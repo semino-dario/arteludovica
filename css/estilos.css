@@ -1,0 +1,821 @@
+*{
+  margin: 0 auto;
+}
+
+body{
+background: radial-gradient(circle, rgba(0,1,4,1) 0%, rgba(58,144,18,1) 0%, rgba(6,42,50,1) 100%);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+@font-face {
+
+  font-family:"Bluefish";
+  src: url('../fonts/bluefish.otf');
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "../fonts/Bluesfish-bold";
+  src:url(Bluefish_Bold.otf);
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+
+:root{
+  --color-titulo:#E7DBC5;
+  --color-rojo: #C14953;
+  --color-gris:#ADA0A6;
+
+}
+
+.titulo-svg{
+  text-align: center;
+}
+
+
+/*BARRA DE NAVEGACIÓN*/
+
+nav{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  justify-content: flex-end;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 0;
+  margin-right: 70px;
+  width: 100%;
+  background-color:none;
+  /*backdrop-filter: blur(2px);*/
+  flex-grow: 1;
+  z-index: 50;
+}
+
+.nav-boton{
+  display: inline-block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 45px;
+  width: 60px;
+  background-color: var(--color-rojo);
+  color:black;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border: none;
+  cursor:pointer;
+
+}
+
+.barra-elementos{
+
+  display: flex;
+  width: 0px;
+  height: 45px;
+    background:  #C14953;
+    color: white;
+    font-weight: bold;
+    -webkit-transition: width 1s, background 1s;
+    -moz-transition: width 1s, background 1s;
+    -o-transition: width 1s, background 1s;
+    transition: width 1s, background 1s;
+    top:0px;
+    margin-right: 0;
+}
+
+#elementos {
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.desplegada {
+    width: 100%;
+}
+
+.items-barra{
+font-size: 100%;
+text-decoration: none;
+padding-top: 18px;
+color: var(--color-titulo);
+width: 100%;
+opacity: 0;
+margin-right: 10%;
+
+}
+
+.muestra-items{
+  transition: opacity 2s;
+  opacity: 1;
+}
+
+.muestra-items-2{
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+
+
+.contacto{
+  border: none;
+  padding-right: 60px;
+}
+
+.icono-triangulo{
+  transition: transform 0.5s;
+
+
+}
+
+.girar-icono{
+transform: rotateY(180deg);
+
+
+}
+
+/* TITULO Y COPETE*/
+
+#titulo-principal{
+  margin-top: 5%;
+  text-align: center;
+  font-size: 700%;
+  font-family:"Bluefish";
+  color: var(--color-titulo);
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity 2s;
+
+}
+
+.subtitulo{
+  text-align: center;
+  margin: 3%  7% -2% 7%;
+}
+
+.copete{
+  margin: -10%  25% 10% 25%;
+  padding: 3%;
+  font-size: 120%;
+  color: var(--color-titulo);
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-width: 2px;
+  font-family:monospace;
+  text-align: center;
+}
+
+.vector{
+  stroke-width: 1px;
+  stroke: #f16c69;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  fill: transparent;
+  animation: dash 40s both;
+  animation-delay: 1.5s;
+}
+
+#subtit{
+  transition: fill-opacity 1.5s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* OBRAS DE TEATRO*/
+
+.contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  perspective: 2000px;
+}
+
+.tarjeta{
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 400px;
+  -moz-backface-visibility: hidden;
+}
+
+
+.tarjeta.descubierta{
+  transform: rotateY(180deg);
+}
+
+
+.tarjeta-imagen{
+position: absolute;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.imagen{
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.tarjeta-contenido{
+display: flex;
+flex-direction: column;
+align-items:center;
+text-align: center;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+border-style: solid;
+border-width: 1px;
+border-radius: 5px;
+width: 400px;
+height: 400px;
+background: #1E2223;
+font-family:serif;
+
+}
+
+.titulo-tarjeta{
+  color:white;
+  font-size: 150%;
+  display: flex;
+  flex-grow: 1;
+  margin-top: 15%;
+  font-family: 'Allerta Stencil', sans-serif;
+
+
+}
+
+
+
+.texto-tarjeta{
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: 'Allerta Stencil', sans-serif;
+  color: var(--color-titulo);
+  text-align: center;
+  font-size: 150%;
+
+}
+
+.boton-tarjeta{
+  text-decoration: none;
+}
+
+
+
+.copete-2{
+  font-size: 120%;
+  color: var(--color-titulo);
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-width: 2px;
+  font-family:monospace;
+  margin: 3%  25% 5% 25%;
+  width: 25%;
+  padding-bottom: 2%;
+  text-align: right;
+}
+
+/*MÚSICA*/
+
+.seccion-musica{
+display: flex;
+position: relative;
+align-items: center;
+margin-top: 5%;
+margin-bottom: 10%;
+border-style:solid;
+border-width: 1px;
+border-top: none;
+border-left: none;
+border-right: none;
+border-color: var(--color-titulo);
+padding-bottom: 7%;
+}
+
+
+.div-musica{
+display: none;
+width: 60vw;
+height: 50vh;
+text-align: center;
+border-radius: 5px;
+
+}
+
+.musica{
+  border-radius: 5px;
+}
+
+.musica-contenido{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content:space-between;
+  width: 60vw;
+  height: 50vh;
+  color:var(--color-titulo);
+  transition: opacity 2s;
+
+}
+
+#boton-escuchar{
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+
+
+#cierra-musica{
+  cursor:pointer;
+}
+
+.imagen-disco{
+  filter: contrast(140%);
+  display: block;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  transition: transform 1s;
+  cursor:pointer;
+  margin-bottom: 10%;
+}
+
+
+.girar{
+transform: rotateZ(720deg);
+
+}
+
+/*TEXTOS*/
+
+.seccion-textos{
+display: flex;
+flex-direction: column;
+position: relative;
+align-items: center;
+width: 60vw;
+margin-top: 5%;
+margin-bottom: 10%;
+padding-bottom: 2%;
+}
+
+.textos-titulo{
+font-family: 'Allerta Stencil', sans-serif;
+color:var(--color-titulo);
+font-size: 200%;
+text-align: center;
+
+}
+
+.texto{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  color:var(--color-titulo);
+  font-family: monospace;
+  font-size: 120%;
+  margin-bottom: 5%;
+
+}
+
+.textos-descarga{
+  display: flex;
+  font-size: 120%;
+  color:var(--color-titulo);
+  width: 100%;
+  border-style:solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: var(--color-titulo);
+  padding-bottom: 5%;
+  cursor:pointer;
+}
+
+.div-boton-descarga{
+display: none;
+flex-direction: column;
+opacity: 0;
+transition: opacity 0.3s;
+border-style: solid;
+border-width: 0px 0px 1px 0px;
+border-color: var(--color-titulo);
+padding-bottom: 3%;
+}
+
+.botones-descarga{
+  font-size: 120%;
+  width: 200px;
+  background: transparent;
+  color: var(--color-gris);
+  border: none;
+  font-family:sans-serif;
+  padding: 3%;
+
+}
+
+.botones-descarga:hover{
+color: var(--color-titulo);
+border-color: var(--color-titulo);
+}
+
+.pdf {
+  margin-left: 2%;
+  font-size: 120%;
+  transition: transform 0.5s;
+}
+
+.pdf:hover{
+  transform: scale(1.2);
+}
+
+#boton-cierra-descarga{
+width: 20%;
+border-radius: 50px;
+margin-top: 5%;
+margin-left: 38%;
+
+}
+
+.icono-cruz{
+  transform-origin: 50% 50%;
+  transition: transform 1s;
+
+}
+
+.icono-cruz:hover{
+transform: rotateZ(180deg);
+
+
+}
+
+.icono-svg{
+  transition: 0.5s;
+
+}
+
+.Group:hover{
+  fill:var(--color-rojo);
+}
+
+.Group2:hover{
+  fill: black;
+}
+
+
+.selected{
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  transform: scale(1.2);
+
+}
+
+.imagen-puerta-mimoteatro{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#foto-territorios{
+  display: block;
+  object-fit: cover;
+  width: 90%;
+  height: 100%;
+  border-style: solid;
+  border-width: 15px;
+  border-color: black;
+
+}
+
+#foto-ludovica{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.imagen-portada{
+  border-bottom: 0px;
+}
+
+/*PRELODER*/
+
+#preloder{
+  height: 100%;
+  width:100%;
+  z-index: 100;
+  background: black;
+  background-size: 100%;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  color: var(--color-titulo);
+  padding-top:15%;
+  }
+
+
+
+/*AJUSTES POR TAMAÑO DE PANTALLA*/
+
+
+@media (max-width: 1250px){
+  .tarjeta{
+    width: 300px;
+    height: 300px;
+  }
+
+
+    .tarjeta{
+      width: 300px;
+      height: 300px;
+    }
+
+
+  .imagen{
+    width: 300px;
+    height: 300px;
+  }
+
+  .tarjeta-contenido{
+    width: 300px;
+    height: 300px;
+  }
+  .texto-tarjeta{
+    font-size: 85%;
+  }
+  .titulo-tarjeta{
+  font-size: 100%;
+
+  }
+
+  .boton-tarjeta{
+  font-size: 110%;
+  }
+
+.pdf{
+  margin-left: auto;
+}
+
+@media (max-width: 950px){
+
+body{
+  background-attachment: initial;
+  background-repeat: initial;
+  background-size: initial;
+  }
+
+#titulo-principal{
+  font-size: 2.5em;
+  margin-top: 10%;
+  font-family: "Anton", sans-serif;
+}
+
+  .contenedor{
+    flex-direction: column;
+  }
+
+.copete-2{
+  width: 70%;
+  margin: 5% auto;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.texto{
+  flex-direction: column;
+}
+
+.seccion-musica{
+  flex-direction: column;
+  width: 80%;
+}
+
+.musica-contenido{
+  text-align: center;
+  flex-direction: column;
+}
+
+.titulo-y-texto{
+  display: flex;
+  flex-direction: column;
+}
+
+.div-musica{
+;
+  width: 80vw;
+
+}
+
+.musica{
+  width: 80vw;
+  height: 300px;
+}
+
+.imagen-disco{
+  width: 240px;
+  height: 240px;
+  margin-bottom: 20px;
+}
+
+.musica-contenido{
+  flex-direction: column;
+  width: 80%;
+  height: 40%;
+}
+
+.seccion-textos{
+    width: 80%;
+}
+
+.textos-descarga{
+  flex-direction: column;
+  margin-left: auto;
+  }
+
+.pdf{
+
+  margin-top: 10px;
+}
+
+
+
+}
+
+@media (max-width: 600px){
+
+
+#subtit{
+  width:105%;
+}
+
+nav{
+  backdrop-filter: none;
+}
+
+.nav-boton{
+  height: 30px;
+  width: 40px;
+  bottom:6px;
+  top:auto;
+}
+
+.barra-elementos{
+flex-direction: column;
+bottom:0;
+top:auto;
+background: none;
+}
+
+
+.items-barra{
+  border-width:0px;
+  background-color: var(--color-rojo);
+}
+
+.desplegada {
+    width: 100%;
+}
+
+.contacto{
+margin:inherit;
+padding-bottom: 5px;
+}
+
+
+
+
+.copete{
+  margin: 0  3% 3% 3%;
+}
+
+#obras{
+  margin-top: 20%;
+  margin-bottom: -15%;
+}
+
+.subtitulo{
+  font-size: 110%;
+}
+
+.textos-titulo{
+  font-size: 160%;
+}
+
+
+
+
+.imagen-disco{
+
+  width: 200px;
+  height: 200px;
+
+}
+
+}
+
+@media (max-width: 400px){
+
+  #titulo-principal{
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+.subtitulo{
+  margin-bottom: 15%;
+
+}
+
+.imagen-portada{
+  margin-top: -10%;
+}
+
+.copete{
+  margin-top: 1%;
+  margin-bottom: 0%;
+
+}
+
+
+.textos-texto{
+  font-size: 100%;
+}
+
+.pdf{
+  font-size: 100%;
+}
+
+}
+
+
+@media (max-width: 300px){
+
+  #titulo-principal{
+    font-size: 250%;
+    margin-top: 5%;
+  }
+
+  .tarjeta{
+    width: 80%;
+    height: 300px;
+  }
+
+
+.imagen{
+  width: 250px;
+  height: 250px;
+}
+
+.tarjeta-contenido{
+  width: 250px;
+  height: 250px;
+}
+.texto-tarjeta{
+  font-size: 85%;
+}
+.titulo-tarjeta{
+font-size: 70%;
+
+}
+
+.boton-tarjeta{
+font-size: 110%;
+}
+
+  .musica{
+
+  }
+}

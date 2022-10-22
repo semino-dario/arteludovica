@@ -1,0 +1,176 @@
+body{
+  background: #1E2223;
+  color:#E7DBC5;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+
+
+#seccion-galeria-mdo img{
+  max-width: 100%;
+
+}
+
+.portada-territorios{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.titulo-territorios{
+font-size: 400%;
+font-family: 'Allerta Stencil', sans-serif;
+margin-bottom: 2%;}
+
+.parrafo-territorios{
+  font-family: monospace;
+  font-size: 120%;
+}
+
+
+.galeria{
+  padding: 4em 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+}
+
+.div-foto{
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  object-position: center;
+}
+
+
+.foto{
+  overflow: hidden;
+  border-radius: 10px;
+  display:block;
+  height: 1fr;
+  width: 1fr;
+  object-fit: cover;
+  object-position: center top;
+
+
+}
+
+.div-foto:hover{
+opacity: 0.7;
+}
+
+.texto-foto{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: 0;
+  color: transparent;
+}
+
+.texto-foto:hover{
+color:white;
+
+}
+
+.foto9{
+  grid-row:span 2;
+}
+
+.foto3{
+
+  grid-row: 3 / span 2;
+}
+
+
+
+.ampliada{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 700px;
+  z-index: 50;
+  position: absolute;
+  border-color: white;
+  margin-left: auto;
+  margin-bottom: 30%;
+  margin-top: 5%;
+  cursor: auto;
+  width: 700px;
+  left: 50%;
+  margin-left: -350px;
+
+}
+
+.ampliada:hover{
+  opacity: 1;
+}
+
+.botones-fotos{
+  display: none;
+  margin-left: 45%;
+  margin-top: -70px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  width: 10%;
+  border-color: #E7DBC5;
+  padding: 5px;
+}
+
+.pasa-fotos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#boton-cierra-foto{
+  z-index: 55;
+
+}
+
+
+.foto-siguiente{
+transform: rotate(180deg);
+}
+
+.placa-galeria{
+  display: flex;
+  align-items: center;
+  font-family:  'EB Garamond', serif;
+  text-align: center;
+  padding: 5%;
+  font-size: 150%;
+}
+
+.titulo-galeria{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 150%;
+
+}
+
+@media (max-width: 37.5rem) {
+  body {
+    font-size: 1.2em;
+  }
+
+  .titulo-territorios{
+    font-size: 250%;
+  }
+
+.galeria{
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+}
