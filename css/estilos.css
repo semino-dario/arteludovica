@@ -159,6 +159,9 @@ transform: rotateY(180deg);
 .subtitulo{
   text-align: center;
   margin: 3%  7% -2% 7%;
+  opacity: 0;
+  color: var(--color-gris);
+  transition: opacity 3s;
 }
 
 .copete{

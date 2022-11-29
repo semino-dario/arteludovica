@@ -108,14 +108,16 @@ botonCierraDescarga.addEventListener("click", cierraDescarga)
 })
 })
 
-///MUESTA TÍTULO Y SUBTÍTULOS AL CARGAR PÁGINA PRINCIPAL
+///MUESTRA TÍTULO Y SUBTÍTULOS AL CARGAR PÁGINA PRINCIPAL
 
-let subtitulo = document.querySelector("#subtit");
 let tituloPrincipal = document.querySelector("#titulo-principal");
+let  subtitulo = document.querySelector(".subtitulo");
 
-function muestraTituloPrincipal (){tituloPrincipal.style.opacity = 1};
+
+function muestraTituloPrincipal (){tituloPrincipal.style.opacity = 1;
+subtitulo.style.opacity = 1;
+
+};
 
 muestraTituloPrincipal()
 
-function pintaSubtitulo (){subtitulo.style.fillOpacity = 1};
-setTimeout(pintaSubtitulo, 4500);
