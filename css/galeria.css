@@ -58,6 +58,8 @@ margin-bottom: 2%;}
   width: 1fr;
   object-fit: cover;
   object-position: center top;
+  border: solid 1px #E7DBC5;
+
 
 
 }
@@ -66,15 +68,6 @@ margin-bottom: 2%;}
 opacity: 0.7;
 }
 
-.texto-foto{
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin: 0;
-  color: transparent;
-}
 
 .texto-foto:hover{
 color:white;
@@ -116,7 +109,7 @@ color:white;
 
 .botones-fotos{
   display: none;
-  margin-left: 45%;
+  margin-left: auto;
   margin-top: -70px;
   border-style: solid;
   border-radius: 20px;
@@ -143,12 +136,13 @@ transform: rotate(180deg);
 }
 
 .placa-galeria{
+  
   display: flex;
   align-items: center;
   font-family:  'EB Garamond', serif;
   text-align: center;
   padding: 5%;
-  font-size: 150%;
+  font-size: 120%;
 }
 
 .titulo-galeria{
@@ -161,10 +155,40 @@ transform: rotate(180deg);
 
 }
 
-@media (max-width: 37.5rem) {
+.titulo-fotografias{
+  margin-top: 10%;
+  margin-bottom: 5%;
+  border: solid 2px white;
+  padding: 1%;
+  width: 40%;
+}
+
+
+@media(max-width: 1024px){
+  .botones-fotos{
+    margin-top: 700px;
+    width: 150px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
   body {
     font-size: 1.2em;
   }
+
+  .botones-fotos{
+    margin-top: 400px;
+ 
+  }
+
+  .ampliada{
+    top:0;
+    width: 340px;
+    margin-left: -175px;
+    max-height: 500px;
+  }
+
 
   .titulo-territorios{
     font-size: 250%;

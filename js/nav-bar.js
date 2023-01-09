@@ -7,7 +7,10 @@ let iconoBarra = document.querySelector(".icono-triangulo");
 
 function activaBarra(){
 elementosBarra.classList.toggle("desplegada");
+
+
 iconoBarra.classList.toggle("girar-icono");
+
 
 itemsBarra.forEach((item) => {
 

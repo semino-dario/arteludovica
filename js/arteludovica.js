@@ -112,12 +112,26 @@ botonCierraDescarga.addEventListener("click", cierraDescarga)
 
 let tituloPrincipal = document.querySelector("#titulo-principal");
 let  subtitulo = document.querySelector(".subtitulo");
-
+let fotoPrincipal = document.querySelector(".imagen-portada")
+let copete = document.querySelector(".copete");
+//let fotoPuerta = document.querySelector("#foto-ludovica")
 
 function muestraTituloPrincipal (){tituloPrincipal.style.opacity = 1;
 subtitulo.style.opacity = 1;
+fotoPrincipal.style.opacity = 1;
+copete.style.opacity = 1;
 
 };
 
 muestraTituloPrincipal()
+
+/*
+function cambiaColor () {
+
+  fotoPuerta.style.filter = "grayscale(200%)";
+}
+
+setTimeout(cambiaColor, 2400)
+
+*/
 

@@ -127,8 +127,12 @@ margin: 8px;
 
 @media (max-width: 650px){
 
+  .texto-critica{
+    font-size: 120%;
+  }
+
   .botones-criticas{
-    margin-top: 90%;
+    margin-top: 120%;
   }
 
 .criticas-completas{
@@ -136,6 +140,13 @@ margin: 8px;
   width: 110%;
 }
 
+}
+
+
+@media (max-width: 600px){
+  .botones-criticas{
+    margin-top: 200%;
+  }
 }
 
 @media (max-width: 450px)
@@ -146,7 +157,6 @@ margin: 8px;
 }
 
   .botones-criticas{
-    margin-top: 150%;
   }
 
 }

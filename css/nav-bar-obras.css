@@ -1,0 +1,44 @@
+
+
+.button-inicio{
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  height: 45px;
+  width: 60px;
+  background-color: var(--color-rojo);
+  color:var(--color-titulo);
+  border: none;
+  cursor:pointer;
+  z-index:100;
+  left: 0;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+.nav-boton{
+  height: 45px;
+  width: 60px;
+  color:var(--color-titulo);
+
+}
+
+.barra-elementos{
+}
+
+@media (max-width: 800px){
+
+  .nav-boton{
+    top:initial;
+    bottom: 0;
+  }
+
+  .button-inicio{
+    top:initial;
+    bottom:0;
+  }
+
+  .items-barra{
+    padding-bottom: 5%;
+  }
+}

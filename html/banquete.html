@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/nav-bar-obras.css">
     <link rel="stylesheet" href="../css/criticas.css">
     <link rel="stylesheet" href="../css/galeria.css">
     <link rel="stylesheet" href="../css/banquete.css">
@@ -17,20 +18,16 @@
 
   <nav>
     <button type="button" class="nav-boton" name="button">
-
-      <svg class="icono-triangulo" width="20px" height="19px" viewBox="0 0 28 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <g  id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Group-4-Copy" transform="translate(0.500000, 0.500000)" fill="#E7DBC5">
-                  <path d="M17.1040067,6.98524464 L23.7385773,20.7647375 C24.6969363,22.7551755 23.860271,25.1456477 21.8698331,26.1040067 C21.3284931,26.3646519 20.7353909,26.5 20.1345706,26.5 L6.86542935,26.5 C4.65629035,26.5 2.86542935,24.709139 2.86542935,22.5 C2.86542935,21.8991797 3.00077746,21.3060776 3.26142267,20.7647375 L9.89599332,6.98524464 C10.8543523,4.99480671 13.2448245,4.15814144 15.2352625,5.11650044 C16.0519099,5.50970103 16.7108061,6.16859725 17.1040067,6.98524464 Z" id="Triangle-Copy" transform="translate(13.500000, 13.000000) scale(1, -1) rotate(-90.000000) translate(-13.500000, -13.000000) "></path>
-              </g>
-          </g>
-      </svg></button>
+      <div class="icono-triangulo"><p class="boton-barra-obras">+ obras</p></div>
+      </button>
     <div class="barra-elementos" id="elementos">
-    <a class="items-barra" href="../index.html">INICIO</a>
-    <a class="items-barra" href="tejedoras.html">Las tejedoras</a>
-    <a class="items-barra" href="musicadeoficinas.html">Música de oficinas</a>
-    <a class="items-barra" href="galeria.html">Territorios</a>
+    <a class="items-barra" href="tejedoras.html">- Las tejedoras -</a>
+    <a class="items-barra" href="musicadeoficinas.html">- Música de oficinas -</a>
   </div>
+  <a  class="link-inicio" href="../index.html">
+  <button type="button" class="button-inicio">inicio</button> 
+</a>
+
   </nav>
 
 
@@ -44,7 +41,7 @@
 <div class="barra-etiquetas">
   <p id="0"class="etiqueta">HISTORIA</p>
   <p id="1" class="etiqueta">ELENCO</p>
-  <p id="2"class="etiqueta">COMENTARIOS</p>
+  <p id="2"class="etiqueta comentarios">COMENTARIOS</p>
   <p id="3"class="etiqueta">GALERÍA</p>
 </div>
 </section>
@@ -79,7 +76,7 @@
 
 
 <div class="imagen-fija">
-  <img  src="../imagenes/imagenes-banquete/banquete-4.png" width="50%" height="50%" alt="">
+  <img  id="nanu-fondo" src="../imagenes/imagenes-banquete/banquete-4.png"  alt="">
 </div>
 </section>
 
@@ -111,7 +108,7 @@
   </div>
 
   <div class="imagen-historia-banquete">
-    <img src="../imagenes/imagenes-banquete/banquete-7.png" width="45%" height="45%" alt="bailarinas">
+    <img class="imagen-seccion" src="../imagenes/imagenes-banquete/banquete-7.png" width="45%" height="45%" alt="Escena del Banquete">
   </div>
 
   </div>
@@ -136,7 +133,7 @@
   <div class="div-elenco">
 
   <div class="imagen-elenco-banquete">
-    <img src="../imagenes/imagenes-banquete/banquete-9.png" width="50%" height="50%" alt="bailarinas">
+    <img src="../imagenes/imagenes-banquete/banquete-9.png" class="imagen-seccion"  width="50%" height="50%" alt="Escena del Banquete">
   </div>
 
   <div class="texto-elenco-banquete">
@@ -175,9 +172,9 @@
   <div class="contenedor-criticas">
     <div class="titulo-comentarios">
 
-    <h1>Comentarios del público</h1>
+    <h1>Comentarios del público</h1> <br> 
     <p>Registrados durante las funciones de 2013 <br> Se pueden ver más comentarios en <a href="http://www.alternativateatral.com/opiniones27837-el-banquete-de-platon" target="_blank">Alterantiva Teatral</a>
-    </p>
+    </p> <br><br>
     </div>
 
   <div class="div-criticas">
@@ -255,7 +252,7 @@
 
         <section class="galeria-banquete secciones-desplegadas">
 
-          <div class="header-2 titulo-galeria">
+          <div class="header titulo-galeria">
             <div class="div-boton-cruz">
             <svg class="boton-cierra-seccion" id="cruz-elenco" width="20px" height="20px" viewBox="0 0 40 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g class="icono-cruz" id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -277,7 +274,7 @@
             <div class="galeria">
 
               <div id="0" class="div-foto placa-galeria">
-                <p>Funciones en <br> Espacio G14 <br> La Libre
+                <p>Funciones en: <br> -Espacio G14 <br> -La Libre <br> -->
                 </p>
               </div>
 
@@ -359,7 +356,7 @@
 
 
               <div id="20" class="div-foto placa-galeria">
-                <p>Ensayos en <br>Centro Cultural Pachamama</p>
+                <p>Ensayos en: <br>-Centro Cultural Pachamama <br> --></p>
               </div>
 
               <div id="21" class="div-foto">
@@ -487,6 +484,8 @@
             </div>
         </section>
 
+
+<script type="text/javascript" src="../js/nav-bar-obras.js"></script>
 <script type="text/javascript" src="../js/galeria.js"></script>
 <script type="text/javascript" src="../js/nav-bar.js"></script>
 <script type="text/javascript" src="../js/obras.js"></script>

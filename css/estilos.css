@@ -54,9 +54,8 @@ nav{
   margin-right: 70px;
   width: 100%;
   background-color:none;
-  /*backdrop-filter: blur(2px);*/
   flex-grow: 1;
-  z-index: 50;
+  z-index: 100;
 }
 
 .nav-boton{
@@ -78,17 +77,17 @@ nav{
 .barra-elementos{
 
   display: flex;
-  width: 0px;
+  width: 100%;
   height: 45px;
-    background:  #C14953;
-    color: white;
-    font-weight: bold;
-    -webkit-transition: width 1s, background 1s;
-    -moz-transition: width 1s, background 1s;
-    -o-transition: width 1s, background 1s;
-    transition: width 1s, background 1s;
-    top:0px;
-    margin-right: 0;
+  background:  #C14953;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: margin 1s, background 1s;
+  -moz-transition: margin 1s, background 1s;
+  -o-transition: margin 1s, background 1s;
+  transition: margin 1s, background 1s;
+  top:0px;
+  margin-right: -10000px;
 }
 
 #elementos {
@@ -99,7 +98,7 @@ nav{
 }
 
 .desplegada {
-    width: 100%;
+    margin-right: 0;
 }
 
 .items-barra{
@@ -114,7 +113,7 @@ margin-right: 10%;
 }
 
 .muestra-items{
-  transition: opacity 2s;
+  transition: opacity 0.5s;
   opacity: 1;
 }
 
@@ -122,8 +121,6 @@ margin-right: 10%;
   transition: opacity 0.5s;
   opacity: 0;
 }
-
-
 
 .contacto{
   border: none;
@@ -133,12 +130,10 @@ margin-right: 10%;
 .icono-triangulo{
   transition: transform 0.5s;
 
-
 }
 
 .girar-icono{
 transform: rotateY(180deg);
-
 
 }
 
@@ -176,6 +171,9 @@ transform: rotateY(180deg);
   border-width: 2px;
   font-family:monospace;
   text-align: center;
+  opacity: 0;
+  transition: opacity 6s;
+
 }
 
 .vector{
@@ -188,15 +186,36 @@ transform: rotateY(180deg);
   animation-delay: 1.5s;
 }
 
-#subtit{
-  transition: fill-opacity 1.5s;
-}
+
 
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
+
+
+.imagen-portada{
+  opacity: 0;
+  transition: opacity 3s;
+  border-bottom: 0px;
+
+
+}
+
+#foto-ludovica{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+
+
+
 
 
 /* OBRAS DE TEATRO*/
@@ -381,6 +400,35 @@ transform: rotateZ(720deg);
 
 }
 
+/*VIDEO*/
+
+.video-teatrailer{
+  text-align: center;
+  color:white;
+  width: 100%;
+  max-width: 550px;
+
+}
+
+
+.mascara-video{
+  position: relative;
+  padding-bottom: 56.15%;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border:0;
+}
+
+
 /*TEXTOS*/
 
 .seccion-textos{
@@ -509,6 +557,7 @@ transform: rotateZ(180deg);
   display: flex;
   flex-direction: column;
   position: relative;
+
 }
 
 #foto-territorios{
@@ -522,17 +571,13 @@ transform: rotateZ(180deg);
 
 }
 
-#foto-ludovica{
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 
+
+.colofon{
+  padding-top: 5%;
+  border-top: solid 1px var(--color-titulo);
 }
 
-.imagen-portada{
-  border-bottom: 0px;
-}
 
 /*PRELODER*/
 
@@ -549,7 +594,6 @@ transform: rotateZ(180deg);
   color: var(--color-titulo);
   padding-top:15%;
   }
-
 
 
 /*AJUSTES POR TAMAÑO DE PANTALLA*/
@@ -604,7 +648,8 @@ body{
 #titulo-principal{
   font-size: 2.5em;
   margin-top: 10%;
-  font-family: "Anton", sans-serif;
+  font-family: 'Allerta Stencil', sans-serif;
+
 }
 
   .contenedor{
@@ -660,6 +705,10 @@ body{
   height: 40%;
 }
 
+.video-teatrailer{
+  padding: 0;
+}
+
 .seccion-textos{
     width: 80%;
 }
@@ -680,10 +729,7 @@ body{
 
 @media (max-width: 600px){
 
-
-#subtit{
-  width:105%;
-}
+  
 
 nav{
   backdrop-filter: none;
@@ -731,7 +777,7 @@ padding-bottom: 5px;
 }
 
 .subtitulo{
-  font-size: 110%;
+  font-size: 70%;
 }
 
 .textos-titulo{
@@ -755,6 +801,7 @@ padding-bottom: 5px;
   #titulo-principal{
     margin-top: 10%;
     margin-bottom: 5%;
+    font-size: 2em;
   }
 
 .subtitulo{
@@ -787,7 +834,6 @@ padding-bottom: 5px;
 @media (max-width: 300px){
 
   #titulo-principal{
-    font-size: 250%;
     margin-top: 5%;
   }
 
